@@ -49,7 +49,7 @@ module.exports = {
                 status.push(dados);
             })
         } catch (error) {
-            res.status(200).json({ error: true, message: error.message, status });
+            res.status(404).json({ error: true, message: error.message, status });
         }
         res.status(200).json({ error: false, message: '', status });
     }
